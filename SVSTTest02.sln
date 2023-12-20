@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVSTTest002Client", "SVSTTe
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C18475CA-CC1B-47C7-A41C-081FDE74993D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVSTTest002Lib", "..\SVSTTest002Lib\SVSTTest002Lib.csproj", "{60A4A9D8-8466-4CA9-86EF-ADE6E9694D17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SVSTTest002Lib", "SVSTTest002Lib\SVSTTest002Lib.csproj", "{52E8909F-C84A-49A5-94A8-A36F1959C659}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{C18475CA-CC1B-47C7-A41C-081FDE74993D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C18475CA-CC1B-47C7-A41C-081FDE74993D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C18475CA-CC1B-47C7-A41C-081FDE74993D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60A4A9D8-8466-4CA9-86EF-ADE6E9694D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60A4A9D8-8466-4CA9-86EF-ADE6E9694D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60A4A9D8-8466-4CA9-86EF-ADE6E9694D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60A4A9D8-8466-4CA9-86EF-ADE6E9694D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E8909F-C84A-49A5-94A8-A36F1959C659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E8909F-C84A-49A5-94A8-A36F1959C659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E8909F-C84A-49A5-94A8-A36F1959C659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E8909F-C84A-49A5-94A8-A36F1959C659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

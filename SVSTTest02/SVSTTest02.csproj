@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SVSTTest002Lib\SVSTTest002Lib.csproj" />
+    <ProjectReference Include="..\SVSTTest002Lib\SVSTTest002Lib.csproj" />
   </ItemGroup>
 
 </Project>
