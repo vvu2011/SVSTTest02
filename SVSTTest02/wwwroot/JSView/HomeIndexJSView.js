@@ -84,12 +84,12 @@ function CreateChart(data) {
     var forthPlot = chart.plot(2);
     forthPlot
         .line()
-        .name('MSFT')
+        .name('H2_VAL')
         .data(msftDataTable.mapAs({ value: 1 }))
         .tooltip(false);
     forthPlot
         .spline()
-        .name('ORCL')
+        .name('O2_VAL')
         .data(msftDataTable.mapAs({ value: 2 }))
         .tooltip(false);
     //forthPlot
