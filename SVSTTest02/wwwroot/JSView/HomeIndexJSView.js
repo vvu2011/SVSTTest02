@@ -29,7 +29,7 @@ $.ajax({
         console.log("данные для диаграммы");
         console.log(chartArray);
 
-        CreateChart();
+        CreateChart(chartArray);
     },
     error: function () {
         alert('Failed to receive the Data');
@@ -37,7 +37,7 @@ $.ajax({
     },
 });
 
-function CreateChart() {
+function CreateChart(data) {
     // The data used in this sample can be obtained from the CDN
     // https://cdn.anychart.com/csv-data/msft-daily-short.js
     // https://cdn.anychart.com/csv-data/orcl-daily-short.js
@@ -46,16 +46,16 @@ function CreateChart() {
 
     // create data tables on loaded data
     var msftDataTable = anychart.data.table();
-    msftDataTable.addData(get_msft_daily_short_data());
+    msftDataTable.addData(data);
 
-    var orclDataTable = anychart.data.table();
-    orclDataTable.addData(get_orcl_daily_short_data());
+    //var orclDataTable = anychart.data.table();
+    //orclDataTable.addData(get_orcl_daily_short_data());
 
-    var cscoDataTable = anychart.data.table();
-    cscoDataTable.addData(get_csco_daily_short_data());
+    //var cscoDataTable = anychart.data.table();
+    //cscoDataTable.addData(get_csco_daily_short_data());
 
-    var ibmDataTable = anychart.data.table();
-    ibmDataTable.addData(get_ibm_daily_short_data());
+    //var ibmDataTable = anychart.data.table();
+    //ibmDataTable.addData(get_ibm_daily_short_data());
 
     // create stock chart
     var chart = anychart.stock();
@@ -63,46 +63,47 @@ function CreateChart() {
     // create first plot on the chart with column series
     var firstPlot = chart.plot(0);
     // create area series on the first plot
-    var msftSeries = firstPlot.area(msftDataTable.mapAs({ value: 4 }));
-    msftSeries.name('MSFT');
+    var msftSeries = firstPlot.area(msftDataTable.mapAs({ value: 1 }));
+    msftSeries.name('H2_VAL');
 
     // create second plot on the chart
     var secondPlot = chart.plot(1);
     // create spline area series on the second plot
     var orclSeries = secondPlot.splineArea(
-        orclDataTable.mapAs({ value: 4 })
+        msftDataTable.mapAs({ value: 2 })
     );
-    orclSeries.name('ORCL').fill('#1976d2 0.65').stroke('1.5 #1976d2');
+    orclSeries.name('O2_VAL').fill('#1976d2 0.65').stroke('1.5 #1976d2');
 
-    // create third plot
-    var thirdPlot = chart.plot(2);
-    // create step area series on the third plot
-    var cscoSeries = thirdPlot.stepArea(cscoDataTable.mapAs({ value: 4 }));
-    cscoSeries.name('CSCO').fill('#ef6c00 0.65').stroke('1.5 #ef6c00');
+    //// create third plot
+    //var thirdPlot = chart.plot(2);
+    //// create step area series on the third plot
+    //var cscoSeries = thirdPlot.stepArea(cscoDataTable.mapAs({ value: 4 }));
+    //cscoSeries.name('CSCO').fill('#ef6c00 0.65').stroke('1.5 #ef6c00');
 
     // create forth plot
-    var forthPlot = chart.plot(3);
+    var forthPlot = chart.plot(2);
     forthPlot
         .line()
         .name('MSFT')
-        .data(msftDataTable.mapAs({ value: 4 }))
+        .data(msftDataTable.mapAs({ value: 1 }))
         .tooltip(false);
     forthPlot
         .spline()
         .name('ORCL')
-        .data(orclDataTable.mapAs({ value: 4 }))
+        .data(msftDataTable.mapAs({ value: 2 }))
         .tooltip(false);
-    forthPlot
-        .stepLine()
-        .name('CSCO')
-        .data(cscoDataTable.mapAs({ value: 4 }))
-        .tooltip(false);
+    //forthPlot
+    //    .stepLine()
+    //    .name('CSCO')
+    //    .data(cscoDataTable.mapAs({ value: 4 }))
+    //    .tooltip(false);
 
     // create scroller series with mapped data
-    chart.scroller().area(msftDataTable.mapAs({ value: 4 }));
+    chart.scroller().area(msftDataTable.mapAs({ value: 1 }));
 
     // set chart selected date/time range
-    chart.selectRange('2005-01-03', '2005-11-20');
+    //chart.selectRange('2005-01-03', '2005-11-20');
+    chart.selectRange(data[0][0], data[data.length - 1][0]);
     // set container id for the chart
     chart.container('container');
     // initiate chart drawing
