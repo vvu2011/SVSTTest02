@@ -1,7 +1,12 @@
+using SVSTTest002Client.BackgroundTasks;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// сервис отправки данных на сервер
+builder.Services.AddHostedService<SendingDataServices>();
 
 var app = builder.Build();
 
