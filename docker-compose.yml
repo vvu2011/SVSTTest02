@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  svsttest02:
+    image: ${DOCKER_REGISTRY-}svsttest02
+    build:
+      context: .
+      dockerfile: SVSTTest02/Dockerfile
