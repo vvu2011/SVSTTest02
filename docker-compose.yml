@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: SVSTTest02/Dockerfile
+
+  svsttest002client:
+    image: ${DOCKER_REGISTRY-}svsttest002client
+    build:
+      context: .
+      dockerfile: SVSTTest002Client/Dockerfile
+

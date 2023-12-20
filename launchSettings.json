@@ -4,7 +4,8 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "svsttest02": "StartDebugging"
+        "svsttest02": "StartDebugging",
+        "svsttest002client": "StartDebugging"
       }
     }
   }
