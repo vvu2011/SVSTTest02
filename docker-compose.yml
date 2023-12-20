@@ -19,6 +19,8 @@ services:
       - "4431:443"
     networks:
       - svsttest002network
+    depends_on:
+      - svsttest002postgres
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -36,6 +38,8 @@ services:
       - "4432:443"
     networks:
       - svsttest002network
+    depends_on:
+      - svsttest02
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
@@ -46,7 +50,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: pass112233word
-      POSTGRES_DB: svsttest002postgresdb
+      POSTGRES_DB: stal
     ports:
       - "5433:5432"
     networks:

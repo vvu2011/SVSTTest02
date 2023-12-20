@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SVSTTest002Lib;
 using SVSTTest02.Models;
 using System.Diagnostics;
 
@@ -29,11 +30,16 @@ namespace SVSTTest02.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public async Task<string> AcceptTheDataAsync()
+        public async Task<string> AcceptTheDataAsync(string id, string timeStamp, string h2Value, string o2value)
         {
-            string responce = "ok";
-            await Task.Delay(1);
-            return responce;
+            string json = "ok";
+
+            GAS_VALUESModel clientPackage = new GAS_VALUESModel(int.Parse(id), DateTime.Parse(timeStamp), double.Parse(h2Value), double.Parse(o2value));
+
+            ServerResponceModel serverResponce = new ServerResponceModel(clientPackage.GAS_VAL_ID, DateTime.Now);
+            json = await serverResponce.GetJsonFromModel();
+
+            return json;
         }
     }
 }
