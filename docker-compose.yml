@@ -1,4 +1,9 @@
 version: '3.4'
+name: svsttest002
+networks:
+  svsttest002network:
+    driver: bridge
+
 
 services:
   svsttest02:
@@ -6,10 +11,33 @@ services:
     build:
       context: .
       dockerfile: SVSTTest02/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "801:80"
+      - "4431:443"
+    networks:
+      - svsttest002network
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
 
   svsttest002client:
     image: ${DOCKER_REGISTRY-}svsttest002client
     build:
       context: .
       dockerfile: SVSTTest002Client/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "802:80"
+      - "4432:443"
+    networks:
+      - svsttest002network
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
 

@@ -14,7 +14,7 @@
                 {
                     try
                     {
-                        HttpResponseMessage response = await client.GetAsync("http://svsttest02/");
+                        HttpResponseMessage response = await client.GetAsync("http://svsttest02:80/Home/AcceptTheData/");
                         response.EnsureSuccessStatusCode();
 
                         string responseBody = await response.Content.ReadAsStringAsync();
