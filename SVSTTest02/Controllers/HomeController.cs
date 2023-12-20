@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SVSTTest002Lib;
+using SVSTTest02.Data;
 using SVSTTest02.Models;
 using System.Diagnostics;
 
@@ -8,10 +9,12 @@ namespace SVSTTest02.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDataContextModel _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, AppDataContextModel context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -34,7 +37,10 @@ namespace SVSTTest02.Controllers
         {
             string json = "ok";
 
-            GAS_VALUESModel clientPackage = new GAS_VALUESModel(int.Parse(id), DateTime.Parse(timeStamp), double.Parse(h2Value), double.Parse(o2value));
+            GAS_VALUESModel clientPackage = new GAS_VALUESModel(DateTime.Parse(timeStamp).ToUniversalTime(), double.Parse(h2Value), double.Parse(o2value));
+
+            await _context.GAS_VALUES.AddAsync(clientPackage);
+            await _context.SaveChangesAsync();
 
             ServerResponceModel serverResponce = new ServerResponceModel(clientPackage.GAS_VAL_ID, DateTime.Now);
             json = await serverResponce.GetJsonFromModel();

@@ -17,7 +17,7 @@ namespace SVSTTest002Client.BackgroundTasks
                 // генерация посылки
                 PackageId++;
                 Random random = new Random();
-                GAS_VALUESModel clientPackage = new GAS_VALUESModel(PackageId, DateTime.Now, Math.Round(random.NextDouble() * 10, 3), Math.Round(random.NextDouble() * 10, 3));
+                GAS_VALUESModel clientPackage = new GAS_VALUESModel(DateTime.Now, Math.Round(random.NextDouble() * 10, 3), Math.Round(random.NextDouble() * 10, 3));
 
                 using (HttpClient client = new HttpClient())
                 {
