@@ -66,7 +66,7 @@ namespace SVSTTest02.Controllers
             string json = "ok";
 
             // запрос данных из таблицы
-            DateTime begin = DateTime.UtcNow.AddDays(-1);
+            DateTime begin = DateTime.UtcNow.AddMinutes(-5);
             List<GAS_VALUESModel> vals = _context.GAS_VALUES
                 .Where(s => s.GAS_VAL_DATE > begin)
                 .ToList();

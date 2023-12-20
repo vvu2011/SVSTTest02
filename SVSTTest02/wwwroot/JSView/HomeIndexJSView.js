@@ -2,40 +2,40 @@
 
 // Post запрос расчетов
 let data = new Object();
-//data.fullNameVU = selectorVU.GetSelectedValue();
-//data.fullnameFactory = DateTimeSelector.SelectorFactory.GetSelectedValue();
-//data.begin = DateTimeSelector.GetBegin();
-//data.end = DateTimeSelector.GetEnd();
-//data.interval = DateTimeSelector.GetInterval();
-$.ajax({
-    type: "GET",
-    url: "/Home/GetDataForChart",
-    data: data,
-    success: function (result) {
-        let jsonData = JSON.parse(result);
-        console.log("данные от сервера");
-        console.log(jsonData);
+setInterval(function () {
+    $.ajax({
+        type: "GET",
+        url: "/Home/GetDataForChart",
+        data: data,
+        success: function (result) {
+            let jsonData = JSON.parse(result);
+            console.log("данные от сервера");
+            console.log(jsonData);
 
-        let chartArray = new Array();
-        for (let i = 0; i < jsonData.length; i++) {
-            let rowArray = new Array();
-            rowArray[0] = jsonData[i].GAS_VAL_DATE;
-            rowArray[1] = jsonData[i].H2_VAL;
-            rowArray[2] = jsonData[i].O2_VAL;
+            let chartArray = new Array();
+            for (let i = 0; i < jsonData.length; i++) {
+                let rowArray = new Array();
+                rowArray[0] = jsonData[i].GAS_VAL_DATE;
+                rowArray[1] = jsonData[i].H2_VAL;
+                rowArray[2] = jsonData[i].O2_VAL;
 
-            chartArray[chartArray.length] = rowArray;
-        }
+                chartArray[chartArray.length] = rowArray;
+            }
 
-        console.log("данные для диаграммы");
-        console.log(chartArray);
+            console.log("данные для диаграммы");
+            console.log(chartArray);
 
-        CreateChart(chartArray);
-    },
-    error: function () {
-        alert('Failed to receive the Data');
-        console.log('Failed ');
-    },
-});
+            let container = document.getElementById("container");
+            container.innerHTML = "";
+
+            CreateChart(chartArray);
+        },
+        error: function () {
+            alert('Failed to receive the Data');
+            console.log('Failed ');
+        },
+    });
+}, 1000);
 
 function CreateChart(data) {
     // The data used in this sample can be obtained from the CDN
