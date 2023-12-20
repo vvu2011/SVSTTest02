@@ -28,5 +28,12 @@ namespace SVSTTest02.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public async Task<string> AcceptTheDataAsync()
+        {
+            string responce = "ok";
+            await Task.Delay(1);
+            return responce;
+        }
     }
 }
