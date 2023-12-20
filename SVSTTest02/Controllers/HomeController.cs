@@ -46,6 +46,7 @@ namespace SVSTTest02.Controllers
         {
             string json = "ok";
 
+            // Преобразование DateTime с Kind=Unspecified в DateTime с Kind=Utc
             GAS_VALUESModel clientPackage = new GAS_VALUESModel(DateTime.Parse(timeStamp).ToUniversalTime(), double.Parse(h2Value), double.Parse(o2value));
 
             await _context.GAS_VALUES.AddAsync(clientPackage);
@@ -67,11 +68,20 @@ namespace SVSTTest02.Controllers
 
             // запрос данных из таблицы
             DateTime begin = DateTime.UtcNow.AddMinutes(-5);
-            List<GAS_VALUESModel> vals = _context.GAS_VALUES
+            List<GAS_VALUESModel> valsUtcTime = _context.GAS_VALUES
                 .Where(s => s.GAS_VAL_DATE > begin)
                 .ToList();
 
-            json = JsonSerializer.Serialize(vals);
+            TimeZoneInfo timeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+
+            // коррекция с учетов временной зоны
+            List<GAS_VALUESModel> valsLocalTime = new List<GAS_VALUESModel>();
+            foreach (var item in valsUtcTime)
+            {
+                valsLocalTime.Add(new GAS_VALUESModel(item.GAS_VAL_DATE + timeZone.BaseUtcOffset, item.H2_VAL, item.O2_VAL));
+            }
+
+            json = JsonSerializer.Serialize(valsLocalTime);
 
             return json;
         }
