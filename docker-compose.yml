@@ -23,6 +23,7 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    restart: always
 
   svsttest002client:
     container_name: svsttest002client
@@ -42,6 +43,7 @@ services:
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    restart: always
 
   svsttest002postgres:
     container_name: svsttest002postgres
