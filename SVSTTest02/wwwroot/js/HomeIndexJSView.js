@@ -10,8 +10,8 @@ setInterval(function () {
         data: data,
         success: function (result) {
             let jsonData = JSON.parse(result);
-            //console.log("данные от сервера");
-            //console.log(jsonData);
+            console.log("данные от сервера");
+            console.log(jsonData);
 
             let chartArray = new Array();
             for (let i = 0; i < jsonData.length; i++) {
@@ -23,8 +23,8 @@ setInterval(function () {
                 chartArray[chartArray.length] = rowArray;
             }
 
-            //console.log("данные для диаграммы");
-            //console.log(chartArray);
+            console.log("данные для диаграммы");
+            console.log(chartArray);
 
             let container = document.getElementById("container");
             container.innerHTML = "";

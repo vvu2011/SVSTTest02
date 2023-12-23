@@ -70,11 +70,13 @@ namespace SVSTTest02.Controllers
             DateTime begin = DateTime.UtcNow.AddMinutes(-5);
             List<GAS_VALUESModel> valsUtcTime = _context.GAS_VALUES
                 .Where(s => s.GAS_VAL_DATE > begin)
+                .OrderByDescending(s=>s.GAS_VAL_DATE)
+                .Take(5000)
+                .OrderBy(s=>s.GAS_VAL_DATE)
                 .ToList();
 
-            TimeZoneInfo timeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
-
             // коррекция с учетов временной зоны
+            TimeZoneInfo timeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
             List<GAS_VALUESModel> valsLocalTime = new List<GAS_VALUESModel>();
             foreach (var item in valsUtcTime)
             {
