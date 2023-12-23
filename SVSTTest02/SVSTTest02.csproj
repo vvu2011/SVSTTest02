@@ -27,4 +27,10 @@
     <ProjectReference Include="..\SVSTTest002Lib\SVSTTest002Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\js\HomeIndexJSView.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
