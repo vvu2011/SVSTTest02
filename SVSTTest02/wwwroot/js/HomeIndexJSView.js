@@ -106,7 +106,7 @@ function CreateChart(data) {
     //chart.selectRange('2005-01-03', '2005-11-20');
     let begin = data[0][0];
     let end = data[data.length - 1][0];
-    //console.log("begin= " + begin + " end= " + end);
+    console.log("begin=" + begin + " end=" + end);
     chart.selectRange(begin, end);
     // set container id for the chart
     chart.container('container');
