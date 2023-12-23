@@ -1,0 +1,1 @@
+docker-compose --project-name svsttest02 up -d
