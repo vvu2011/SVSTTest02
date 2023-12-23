@@ -1906,3 +1906,195 @@ Connection refused (svsttest02:80)
 {"Id":1349,"TimeStamp":"2023-12-23T10:30:17.3321886+00:00"}
 {"Id":1350,"TimeStamp":"2023-12-23T10:30:17.3660906+00:00"}
 {"Id":1351,"TimeStamp":"2023-12-23T10:30:17.4230231+00:00"}
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+Connection refused (svsttest02:80)
+{"Id":1464,"TimeStamp":"2023-12-23T10:38:17.7546739+00:00"}
+{"Id":1465,"TimeStamp":"2023-12-23T10:38:18.0422227+00:00"}
+{"Id":1466,"TimeStamp":"2023-12-23T10:38:18.1546075+00:00"}
+{"Id":1467,"TimeStamp":"2023-12-23T10:38:18.2381391+00:00"}
+{"Id":1468,"TimeStamp":"2023-12-23T10:38:18.3781472+00:00"}
+{"Id":1469,"TimeStamp":"2023-12-23T10:38:18.444255+00:00"}
+{"Id":1470,"TimeStamp":"2023-12-23T10:38:18.5744724+00:00"}
+{"Id":1471,"TimeStamp":"2023-12-23T10:38:18.6701812+00:00"}
+{"Id":1472,"TimeStamp":"2023-12-23T10:38:18.7796197+00:00"}
+{"Id":1473,"TimeStamp":"2023-12-23T10:38:18.836645+00:00"}
+{"Id":1474,"TimeStamp":"2023-12-23T10:38:18.9530182+00:00"}
+{"Id":1475,"TimeStamp":"2023-12-23T10:38:19.0877194+00:00"}
+{"Id":1476,"TimeStamp":"2023-12-23T10:38:19.1371488+00:00"}
+{"Id":1477,"TimeStamp":"2023-12-23T10:38:19.1949179+00:00"}
+{"Id":1478,"TimeStamp":"2023-12-23T10:38:19.2748059+00:00"}
+{"Id":1479,"TimeStamp":"2023-12-23T10:38:19.3368951+00:00"}
+{"Id":1480,"TimeStamp":"2023-12-23T10:38:19.3916117+00:00"}
+{"Id":1481,"TimeStamp":"2023-12-23T10:38:19.4708379+00:00"}
+{"Id":1482,"TimeStamp":"2023-12-23T10:38:19.5713231+00:00"}
+{"Id":1483,"TimeStamp":"2023-12-23T10:38:19.644618+00:00"}
+{"Id":1484,"TimeStamp":"2023-12-23T10:38:19.7420984+00:00"}
+{"Id":1485,"TimeStamp":"2023-12-23T10:38:19.7915407+00:00"}
+{"Id":1486,"TimeStamp":"2023-12-23T10:38:19.87309+00:00"}
+{"Id":1487,"TimeStamp":"2023-12-23T10:38:19.9702806+00:00"}
+{"Id":1488,"TimeStamp":"2023-12-23T10:38:20.0423314+00:00"}
+{"Id":1489,"TimeStamp":"2023-12-23T10:38:20.1167185+00:00"}
+{"Id":1490,"TimeStamp":"2023-12-23T10:38:20.1847008+00:00"}
+{"Id":1491,"TimeStamp":"2023-12-23T10:38:20.2805043+00:00"}
+{"Id":1492,"TimeStamp":"2023-12-23T10:38:20.3262472+00:00"}
+{"Id":1493,"TimeStamp":"2023-12-23T10:38:20.4047097+00:00"}
+{"Id":1494,"TimeStamp":"2023-12-23T10:38:20.4993897+00:00"}
+{"Id":1495,"TimeStamp":"2023-12-23T10:38:20.5725472+00:00"}
+{"Id":1496,"TimeStamp":"2023-12-23T10:38:20.6465558+00:00"}
+{"Id":1497,"TimeStamp":"2023-12-23T10:38:20.7094986+00:00"}
+{"Id":1498,"TimeStamp":"2023-12-23T10:38:20.7575868+00:00"}
+{"Id":1499,"TimeStamp":"2023-12-23T10:38:20.8195735+00:00"}
+{"Id":1500,"TimeStamp":"2023-12-23T10:38:20.8828722+00:00"}
+{"Id":1501,"TimeStamp":"2023-12-23T10:38:20.9728232+00:00"}
+{"Id":1502,"TimeStamp":"2023-12-23T10:38:21.0498638+00:00"}
+{"Id":1503,"TimeStamp":"2023-12-23T10:38:21.1517936+00:00"}
+{"Id":1504,"TimeStamp":"2023-12-23T10:38:21.2709419+00:00"}
+{"Id":1505,"TimeStamp":"2023-12-23T10:38:21.35236+00:00"}
+{"Id":1506,"TimeStamp":"2023-12-23T10:38:21.4229813+00:00"}
+{"Id":1507,"TimeStamp":"2023-12-23T10:38:21.4778784+00:00"}
+{"Id":1508,"TimeStamp":"2023-12-23T10:38:21.5743307+00:00"}
+{"Id":1509,"TimeStamp":"2023-12-23T10:38:21.6658057+00:00"}
+{"Id":1510,"TimeStamp":"2023-12-23T10:38:21.7144852+00:00"}
+{"Id":1511,"TimeStamp":"2023-12-23T10:38:21.7810025+00:00"}
+{"Id":1512,"TimeStamp":"2023-12-23T10:38:21.8464092+00:00"}
+{"Id":1513,"TimeStamp":"2023-12-23T10:38:21.9068601+00:00"}
+{"Id":1514,"TimeStamp":"2023-12-23T10:38:21.9648804+00:00"}
+{"Id":1515,"TimeStamp":"2023-12-23T10:38:22.0343242+00:00"}
+{"Id":1516,"TimeStamp":"2023-12-23T10:38:22.0936694+00:00"}
+{"Id":1517,"TimeStamp":"2023-12-23T10:38:22.2171627+00:00"}
+{"Id":1518,"TimeStamp":"2023-12-23T10:38:22.2762782+00:00"}
+{"Id":1519,"TimeStamp":"2023-12-23T10:38:22.3540888+00:00"}
+{"Id":1520,"TimeStamp":"2023-12-23T10:38:22.4133107+00:00"}
+{"Id":1521,"TimeStamp":"2023-12-23T10:38:22.451116+00:00"}
+{"Id":1522,"TimeStamp":"2023-12-23T10:38:22.490231+00:00"}
+{"Id":1523,"TimeStamp":"2023-12-23T10:38:22.5367921+00:00"}
+{"Id":1524,"TimeStamp":"2023-12-23T10:38:22.6273508+00:00"}
+{"Id":1525,"TimeStamp":"2023-12-23T10:38:22.6647142+00:00"}
+{"Id":1526,"TimeStamp":"2023-12-23T10:38:22.7449556+00:00"}
+{"Id":1527,"TimeStamp":"2023-12-23T10:38:22.8241454+00:00"}
+{"Id":1528,"TimeStamp":"2023-12-23T10:38:22.8918907+00:00"}
+{"Id":1529,"TimeStamp":"2023-12-23T10:38:22.9777214+00:00"}
+{"Id":1530,"TimeStamp":"2023-12-23T10:38:23.0425749+00:00"}
+{"Id":1531,"TimeStamp":"2023-12-23T10:38:23.1228413+00:00"}
+{"Id":1532,"TimeStamp":"2023-12-23T10:38:23.1961225+00:00"}
+{"Id":1533,"TimeStamp":"2023-12-23T10:38:23.2540279+00:00"}
+{"Id":1534,"TimeStamp":"2023-12-23T10:38:23.537618+00:00"}
+{"Id":1535,"TimeStamp":"2023-12-23T10:38:23.5906005+00:00"}
+{"Id":1536,"TimeStamp":"2023-12-23T10:38:23.6920832+00:00"}
+{"Id":1537,"TimeStamp":"2023-12-23T10:38:23.7615217+00:00"}
+{"Id":1538,"TimeStamp":"2023-12-23T10:38:23.8651695+00:00"}
+{"Id":1539,"TimeStamp":"2023-12-23T10:38:23.974144+00:00"}
+{"Id":1540,"TimeStamp":"2023-12-23T10:38:24.082901+00:00"}
+{"Id":1541,"TimeStamp":"2023-12-23T10:38:24.1810447+00:00"}
+{"Id":1542,"TimeStamp":"2023-12-23T10:38:24.2943587+00:00"}
+{"Id":1543,"TimeStamp":"2023-12-23T10:38:24.3554123+00:00"}
+{"Id":1544,"TimeStamp":"2023-12-23T10:38:24.4317411+00:00"}
+{"Id":1545,"TimeStamp":"2023-12-23T10:38:24.4787315+00:00"}
+{"Id":1546,"TimeStamp":"2023-12-23T10:38:24.5565618+00:00"}
+{"Id":1547,"TimeStamp":"2023-12-23T10:38:24.6333529+00:00"}
+{"Id":1548,"TimeStamp":"2023-12-23T10:38:24.6879212+00:00"}
+{"Id":1549,"TimeStamp":"2023-12-23T10:38:24.7495355+00:00"}
+{"Id":1550,"TimeStamp":"2023-12-23T10:38:24.819821+00:00"}
+{"Id":1551,"TimeStamp":"2023-12-23T10:38:24.8930139+00:00"}
+{"Id":1552,"TimeStamp":"2023-12-23T10:38:24.9691805+00:00"}
+{"Id":1553,"TimeStamp":"2023-12-23T10:38:25.0640232+00:00"}
+{"Id":1554,"TimeStamp":"2023-12-23T10:38:25.1466396+00:00"}
+{"Id":1555,"TimeStamp":"2023-12-23T10:38:25.2218911+00:00"}
+{"Id":1556,"TimeStamp":"2023-12-23T10:38:25.2966991+00:00"}
+{"Id":1557,"TimeStamp":"2023-12-23T10:38:25.365464+00:00"}
+{"Id":1558,"TimeStamp":"2023-12-23T10:38:25.481055+00:00"}
+{"Id":1559,"TimeStamp":"2023-12-23T10:38:25.5676191+00:00"}
+{"Id":1560,"TimeStamp":"2023-12-23T10:38:25.6505388+00:00"}
+{"Id":1561,"TimeStamp":"2023-12-23T10:38:25.7186224+00:00"}
+{"Id":1562,"TimeStamp":"2023-12-23T10:38:25.7893068+00:00"}
+{"Id":1563,"TimeStamp":"2023-12-23T10:38:25.8490703+00:00"}
+{"Id":1564,"TimeStamp":"2023-12-23T10:38:25.9226711+00:00"}
+{"Id":1565,"TimeStamp":"2023-12-23T10:38:25.9974852+00:00"}
+{"Id":1566,"TimeStamp":"2023-12-23T10:38:26.0951754+00:00"}
+{"Id":1567,"TimeStamp":"2023-12-23T10:38:26.1983317+00:00"}
+{"Id":1568,"TimeStamp":"2023-12-23T10:38:26.3410741+00:00"}
+{"Id":1569,"TimeStamp":"2023-12-23T10:38:26.4217265+00:00"}
+{"Id":1570,"TimeStamp":"2023-12-23T10:38:26.5235759+00:00"}
+{"Id":1571,"TimeStamp":"2023-12-23T10:38:26.5712978+00:00"}
+{"Id":1572,"TimeStamp":"2023-12-23T10:38:26.6865697+00:00"}
+{"Id":1573,"TimeStamp":"2023-12-23T10:38:26.799125+00:00"}
+{"Id":1574,"TimeStamp":"2023-12-23T10:38:26.8567467+00:00"}
+{"Id":1575,"TimeStamp":"2023-12-23T10:38:26.9752073+00:00"}
+{"Id":1576,"TimeStamp":"2023-12-23T10:38:27.0530809+00:00"}
+{"Id":1577,"TimeStamp":"2023-12-23T10:38:27.1411144+00:00"}
+{"Id":1578,"TimeStamp":"2023-12-23T10:38:27.2544791+00:00"}
+{"Id":1579,"TimeStamp":"2023-12-23T10:38:27.4165654+00:00"}
+{"Id":1580,"TimeStamp":"2023-12-23T10:38:27.5102331+00:00"}
+{"Id":1581,"TimeStamp":"2023-12-23T10:38:27.5694677+00:00"}
+{"Id":1582,"TimeStamp":"2023-12-23T10:38:27.6261382+00:00"}
+{"Id":1583,"TimeStamp":"2023-12-23T10:38:27.7694802+00:00"}
+{"Id":1584,"TimeStamp":"2023-12-23T10:38:27.8778854+00:00"}
+{"Id":1585,"TimeStamp":"2023-12-23T10:38:27.9922512+00:00"}
+{"Id":1586,"TimeStamp":"2023-12-23T10:38:28.1006706+00:00"}
+{"Id":1587,"TimeStamp":"2023-12-23T10:38:28.1506463+00:00"}
