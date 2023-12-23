@@ -1,10 +1,28 @@
 version: '3.4'
-name: svsttest002
+
 networks:
   svsttest002network:
     driver: bridge
 
+volumes:
+  svsttest002postgresvolume:
+
 services:
+  svsttest002postgres:
+    container_name: svsttest002postgres
+    image: postgres:15.0
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass112233word
+      POSTGRES_DB: stal
+    ports:
+      - "5433:5432"
+    networks:
+      - svsttest002network
+    volumes:
+      - svsttest002postgresvolume:/var/lib/postgresql/data
+
   svsttest02:
     container_name: svsttest02
     image: ${DOCKER_REGISTRY-}svsttest02
@@ -42,21 +60,3 @@ services:
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
     restart: always
-
-  svsttest002postgres:
-    container_name: svsttest002postgres
-    image: postgres:15.0
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: pass112233word
-      POSTGRES_DB: stal
-    ports:
-      - "5433:5432"
-    networks:
-      - svsttest002network
-    volumes:
-      - svsttest002postgresvolume:/var/lib/postgresql/data
-
-volumes:
-  svsttest002postgresvolume:
