@@ -6,12 +6,22 @@ namespace SVSTTest002Client.BackgroundTasks
     {
         public int PackageId { get; set; }
 
+        // log
+        string fileName { get; set; }
+        string wwwrootPath { get; set; } 
+        string filePath { get; set; }
+
         public SendingDataServices()
         {
+
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            fileName = "log.txt";
+            wwwrootPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+            filePath = Path.Combine(wwwrootPath, fileName);
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 // генерация посылки
@@ -38,15 +48,50 @@ namespace SVSTTest002Client.BackgroundTasks
 
                         string responseBody = await response.Content.ReadAsStringAsync();
                         Console.WriteLine(responseBody);
+
+                        await LoggingToFileAsync(responseBody);
                     }
                     catch (HttpRequestException ex)
                     {
                         Console.WriteLine(ex.Message);
+                        await LoggingToFileAsync(ex.Message);
+
                     }
                 }
 
-                await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(0), stoppingToken);
             }
+        }
+
+        private async Task<string> LoggingToFileAsync(string row)
+        {
+            string status = "ok";
+
+            // лог
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    using (StreamWriter writer = File.AppendText(filePath))
+                    {
+                        writer.WriteLine(row);
+                    }
+                }
+                else
+                {
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        writer.WriteLine(row);
+                    }
+                }
+            }
+            catch (Exception ex2)
+            {
+                Console.WriteLine(ex2.Message);
+            }
+
+            await Task.Delay(0);
+            return status;
         }
     }
 }
