@@ -15,7 +15,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "801:80"
-      - "4431:443"
     networks:
       - svsttest002network
     depends_on:
@@ -35,7 +34,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "802:80"
-      - "4432:443"
     networks:
       - svsttest002network
     depends_on:

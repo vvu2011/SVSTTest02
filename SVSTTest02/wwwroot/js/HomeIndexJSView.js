@@ -2,6 +2,7 @@
 
 // Post запрос расчетов
 let data = new Object();
+
 setInterval(function () {
     $.ajax({
         type: "GET",
@@ -9,8 +10,8 @@ setInterval(function () {
         data: data,
         success: function (result) {
             let jsonData = JSON.parse(result);
-            console.log("данные от сервера");
-            console.log(jsonData);
+            //console.log("данные от сервера");
+            //console.log(jsonData);
 
             let chartArray = new Array();
             for (let i = 0; i < jsonData.length; i++) {
@@ -22,8 +23,8 @@ setInterval(function () {
                 chartArray[chartArray.length] = rowArray;
             }
 
-            console.log("данные для диаграммы");
-            console.log(chartArray);
+            //console.log("данные для диаграммы");
+            //console.log(chartArray);
 
             let container = document.getElementById("container");
             container.innerHTML = "";
@@ -35,7 +36,7 @@ setInterval(function () {
             console.log('Failed ');
         },
     });
-}, 1000);
+}, 5000);
 
 function CreateChart(data) {
     // The data used in this sample can be obtained from the CDN
@@ -103,7 +104,10 @@ function CreateChart(data) {
 
     // set chart selected date/time range
     //chart.selectRange('2005-01-03', '2005-11-20');
-    chart.selectRange(data[0][0], data[data.length - 1][0]);
+    let begin = data[0][0];
+    let end = data[data.length - 1][0];
+    //console.log("begin= " + begin + " end= " + end);
+    chart.selectRange(begin, end);
     // set container id for the chart
     chart.container('container');
     // initiate chart drawing
