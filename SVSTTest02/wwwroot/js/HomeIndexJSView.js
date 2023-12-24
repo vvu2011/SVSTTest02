@@ -103,9 +103,13 @@ function CreateChart(data) {
     chart.scroller().area(msftDataTable.mapAs({ value: 1 }));
 
     // set chart selected date/time range
-    //chart.selectRange('2005-01-03', '2005-11-20');
-    let begin = data[0][0];
-    let end = data[data.length - 1][0];
+    end = new Date();
+    end.setHours(end.getHours() + 3);
+
+    begin = new Date();
+    begin.setHours(begin.getHours() + 3);
+    begin.setMinutes(begin.getMinutes() - 5);
+
     console.log("begin=" + begin + " end=" + end);
     chart.selectRange(begin, end);
     // set container id for the chart

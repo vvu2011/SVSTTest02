@@ -70,9 +70,6 @@ namespace SVSTTest02.Controllers
             DateTime begin = DateTime.UtcNow.AddMinutes(-5);
             List<GAS_VALUESModel> valsUtcTime = _context.GAS_VALUES
                 .Where(s => s.GAS_VAL_DATE > begin)
-                .OrderByDescending(s=>s.GAS_VAL_DATE)
-                .Take(5000)
-                .OrderBy(s=>s.GAS_VAL_DATE)
                 .ToList();
 
             // коррекция с учетов временной зоны
