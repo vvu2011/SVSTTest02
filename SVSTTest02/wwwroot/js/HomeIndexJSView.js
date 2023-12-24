@@ -54,11 +54,8 @@ function CreateChart(data) {
 
     // create second plot on the chart
     var secondPlot = chart.plot(1);
-    // create spline area series on the second plot
-    var orclSeries = secondPlot.splineArea(
-        msftDataTable.mapAs({ value: 2 })
-    );
-    orclSeries.name('O2_VAL').fill('#1976d2 0.65').stroke('1.5 #1976d2');
+    var orclSeries = secondPlot.area(msftDataTable.mapAs({ value: 2 }));
+    orclSeries.name('O2_VAL');
 
     // create forth plot
     var forthPlot = chart.plot(2);
