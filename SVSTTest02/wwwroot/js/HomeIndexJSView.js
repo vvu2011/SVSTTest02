@@ -39,24 +39,9 @@ setInterval(function () {
 }, 5000);
 
 function CreateChart(data) {
-    // The data used in this sample can be obtained from the CDN
-    // https://cdn.anychart.com/csv-data/msft-daily-short.js
-    // https://cdn.anychart.com/csv-data/orcl-daily-short.js
-    // https://cdn.anychart.com/csv-data/csco-daily-short.js
-    // https://cdn.anychart.com/csv-data/ibm-daily-short.js
-
     // create data tables on loaded data
     var msftDataTable = anychart.data.table();
     msftDataTable.addData(data);
-
-    //var orclDataTable = anychart.data.table();
-    //orclDataTable.addData(get_orcl_daily_short_data());
-
-    //var cscoDataTable = anychart.data.table();
-    //cscoDataTable.addData(get_csco_daily_short_data());
-
-    //var ibmDataTable = anychart.data.table();
-    //ibmDataTable.addData(get_ibm_daily_short_data());
 
     // create stock chart
     var chart = anychart.stock();
@@ -75,12 +60,6 @@ function CreateChart(data) {
     );
     orclSeries.name('O2_VAL').fill('#1976d2 0.65').stroke('1.5 #1976d2');
 
-    //// create third plot
-    //var thirdPlot = chart.plot(2);
-    //// create step area series on the third plot
-    //var cscoSeries = thirdPlot.stepArea(cscoDataTable.mapAs({ value: 4 }));
-    //cscoSeries.name('CSCO').fill('#ef6c00 0.65').stroke('1.5 #ef6c00');
-
     // create forth plot
     var forthPlot = chart.plot(2);
     forthPlot
@@ -93,11 +72,6 @@ function CreateChart(data) {
         .name('O2_VAL')
         .data(msftDataTable.mapAs({ value: 2 }))
         .tooltip(false);
-    //forthPlot
-    //    .stepLine()
-    //    .name('CSCO')
-    //    .data(cscoDataTable.mapAs({ value: 4 }))
-    //    .tooltip(false);
 
     // create scroller series with mapped data
     chart.scroller().area(msftDataTable.mapAs({ value: 1 }));
@@ -112,6 +86,7 @@ function CreateChart(data) {
 
     console.log("begin=" + begin + " end=" + end);
     chart.selectRange(begin, end);
+
     // set container id for the chart
     chart.container('container');
     // initiate chart drawing
