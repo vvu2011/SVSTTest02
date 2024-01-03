@@ -33,7 +33,7 @@ setInterval(function () {
             CreateChart(chartArray);
         },
         error: function () {
-            alert('Failed to receive the Data');
+            //alert('Failed to receive the Data');
             console.log('Failed ');
         },
     });
