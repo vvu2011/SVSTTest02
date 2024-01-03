@@ -8,6 +8,7 @@ setInterval(function () {
         type: "GET",
         url: "/Home/GetDataForChart",
         data: data,
+        timeout: 180000,  // Timeout in milliseconds (180 seconds)
         success: function (result) {
             let jsonData = JSON.parse(result);
             console.log("данные от сервера");
@@ -36,6 +37,7 @@ setInterval(function () {
             console.log('Failed ');
         },
     });
+
 }, 5000);
 
 function CreateChart(data) {
